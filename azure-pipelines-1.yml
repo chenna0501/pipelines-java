@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+
+
+steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
@@ -16,8 +19,6 @@ pool:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
-
-steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
